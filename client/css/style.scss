@@ -1,0 +1,41 @@
+// Vortoj
+.word-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  .word-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+
+// Uzita de la serĉilo
+.push-right {
+  display: block;
+  margin-left: auto;
+}
+
+
+//// Paĝopiedo
+// Igi ĝin glua (ĉiam aperos sur la malsupro de la paĝo)
+// https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+.retejo {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.reteja-enhavo {
+  flex: 1;
+}
+
+
+//// Surskribas Bulma
+// Dekomence "display" iĝas flex en grandaj ekranoj
+// Grava por la paĝopiedo
+.navbar {
+  display: block;
+}

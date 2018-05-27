@@ -1,0 +1,14 @@
+.env
+.idea
+.vscode
+.git
+.DS_Store
+.eslintrc.json
+database-dump/
+/*.log
+node_modules/
+/coverage/
+/lib/
+/assets/
+/dist/
+/public/app.js

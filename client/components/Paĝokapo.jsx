@@ -10,11 +10,11 @@ class Paĝokapo extends React.Component {
   render() {
     return (
       <header className="navbar is-black" id="header">
-        <div className="navbar-brand">
-          <div className="navbar-item" onClick={() => {window.location.replace(location.origin)}} style={{cursor:'pointer'}}>
-            <b>🐮 Bona Vortaro</b>
+        <div className="kolumnoj" style={{"margin": "0 0 0 0"}}>
+          <div className="kolumno">
+            <a className="" href="/" style={{ "color": "white"}}><b>🐮 Bona Vortaro</b></a>
           </div>
-          <div className="navbar-item push-right">
+          <div className="kolumno" style={{"justify-content": "flex-end"}}>
             <Serĉi/>
           </div>
         </div>
@@ -22,6 +22,5 @@ class Paĝokapo extends React.Component {
     );
   }
 }
-
 
 export default Paĝokapo;

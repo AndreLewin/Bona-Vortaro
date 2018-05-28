@@ -1,3 +1,17 @@
+// Paĝokapo
+// Por ke la serĉilo aspektu bone en mallarĝaj ekranoj
+.kolumnoj {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;  
+}
+
+.kolumno {
+  padding: 0.75rem;
+
+}
+
 // Vortoj
 .word-row {
   display: flex;

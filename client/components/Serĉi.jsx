@@ -15,6 +15,7 @@ class Serĉi extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -27,6 +28,12 @@ class Serĉi extends React.Component {
     });
   }
 
+  handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      window.location.replace(location.origin + "/" + this.state.teksto);
+    }
+  }
+
   handleSubmit() {
     window.location.replace(location.origin + "/" + this.state.teksto);
   }
@@ -36,10 +43,18 @@ class Serĉi extends React.Component {
       <React.Fragment>
         <div className="field has-addons">
           <div className="control">
-            <input className="input" id='teksto_de_serĉilo' type="text" placeholder="Vorto" onChange={this.handleChange}/>
+            <input
+              className="input"
+              id='teksto_de_serĉilo' type="text" placeholder="Vorto"
+              onChange={this.handleChange}
+              onKeyPress={this.handleKeyPress}
+            />
           </div>
           <div className="control">
-            <a className="button is-info" onClick={this.handleSubmit} disabled={this.state.eraro || this.state.ŝargado}>
+            <a
+              className="button is-info"
+              onClick={this.handleSubmit}
+              disabled={this.state.eraro || this.state.ŝargado}>
               {this.state.ŝargado ? "Bonvolu atendi…" : "Serĉi"}
             </a>
           </div>
